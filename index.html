@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TQ's Playlist</title>
+    <!-- Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel">
+    <style>
+        body {
+            font-family: 'Cinzel', Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+        h1 {
+            text-align: center;
+        }
+        .playlist {
+            list-style-type: none;
+            padding: 0;
+        }
+        .playlist li {
+            margin-bottom: 20px;
+        }
+        audio {
+            width: 100%;
+            background-color: black;
+            border: 2px solid white;
+            border-radius: 25px;
+            outline: none;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border: 2px solid white;
+            border-radius: 25px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .button span {
+            display: inline-block;
+            position: relative;
+            transition: 0.3s;
+        }
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.3s;
+        }
+        .button:hover span {
+            padding-right: 25px;
+        }
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        .button:hover {
+            background-color: white;
+            color: black;
+            transform: scale(1.05);
+        }
+
+        /* Custom audio player styles */
+        audio::-webkit-media-controls-panel {
+            background-color: black;
+        }
+        audio::-webkit-media-controls-play-button {
+            background-color: white;
+            border-radius: 50%;
+        }
+        audio::-webkit-media-controls-play-button:hover {
+            background-color: #ddd;
+        }
+        audio::-webkit-media-controls-current-time-display,
+        audio::-webkit-media-controls-time-remaining-display {
+            color: white;
+        }
+        audio::-webkit-media-controls-volume-slider {
+            background-color: white;
+            border-radius: 25px;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+        audio::-webkit-media-controls-mute-button {
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        /* Firefox specific styles */
+        @-moz-document url-prefix() {
+            audio {
+                background-color: black;
+                border: 2px solid white;
+                border-radius: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Image -->
+    <img src="https://i.ibb.co/Nt59CSh/TRUEQUOTE-LOGO.png" alt="TRUEQUOTE LOGO" style="max-width: 100%; height: auto;">
+
+    <h1>True Quote's Playlist</h1>
+    
+    <div class="button-container">
+        <a href="https://trumusic9595.github.io/Trumusic-info/" class="button">
+            <span><strong>HOME PAGE</strong></span>
+        </a>
+    </div>
+
+    <h2>MORE VERSES</h2>
+    <ul class="playlist">
+        <li>
+            <h3>Track 1: Perceptive</h3>
+            <audio controls>
+                <source src="https://raw.githubusercontent.com/Trumusic9595/Trumusic/main/Ismaell%20Bethencourt%20-%20Perceptive.%20(prod.%20by%20Venezia%20Beats)%202024-05-11%2021_19.m4a" type="audio/mp4">
+                Your browser does not support the audio element.
+            </audio>
+        </li>
+        <li>
+            <h3>Track 2: Bes-typo</h3>
+            <audio controls>
+                <source src="https://raw.githubusercontent.com/Trumusic9595/Trumusic/main/Ismaell%20Bethencourt%20-%20Bes-typo.%20(prod.%20by%20sound%20house.pat)%202024-07-02%2023_18%20(1).m4a" type="audio/mp4">
+                Your browser does not support the audio element.
+            </audio>
+        </li>
+        <li>
+            <h3>Track 3: 777</h3>
+            <audio controls>
+                <source src="https://raw.githubusercontent.com/Trumusic9595/Trumusic/main/777.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </li>
+        <li>
+            <h3>Track 4: Change on my Mind</h3>
+            <audio controls>
+                <source src="https://raw.githubusercontent.com/Trumusic9595/Trumusic/main/%24Change_on_my_Mind%24.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </li>
+        <li>
+            <h3>Track 5: WRECK</h3>
+            <audio controls>
+                <source src="https://raw.githubusercontent.com/Trumusic9595/Trumusic/main/WRECK__(prod__by_Pietoz).mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </li>
+    </ul>
+</body>
+</html>
